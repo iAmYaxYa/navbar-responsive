@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Responsive</title>
+    <!-- CSS LINK  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- FONT AWESOME CDN LINK  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR  -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- LOGO -->
+        <a href="#" class="logo">Logo</a>
+        <!-- LINKS -->
+        <ul class="links">
+          <li>
+            <a href="#" class="active">home</a>
+          </li>
+          <li>
+            <a href="#">about</a>
+          </li>
+          <li>
+            <a href="#">services</a>
+          </li>
+          <li>
+            <a href="#">portfolio</a>
+          </li>
+          <li>
+            <a href="#">team</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+          <li>
+            <a href="#">blog</a>
+          </li>
+        </ul>
+        <!-- TOGGLE MENU  -->
+        <button class="toggle-menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- SCRIPT  -->
+    <script>
+      const navbarLinks = document.querySelector(".navbar .links");
+      const toggleMenuBtn = document.querySelector(".navbar .toggle-menu");
+      const toggleMenuIcon = document.querySelector(".navbar .toggle-menu i");
+
+      const toggleLinks = () => {
+        navbarLinks.classList.toggle("show");
+        toggleMenuIcon.classList.toggle("fa-xmark");
+      };
+
+      toggleMenuBtn.addEventListener("click", toggleLinks);
+    </script>
+  </body>
+</html>
